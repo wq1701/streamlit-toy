@@ -1,5 +1,19 @@
 # streamlit-toy
 
+some note about setting up PyCharm using the anaconda env:
+
+https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#modify_interpreter
+
+follow-up on checking conda env: `conda env list`
+
+`conda activate streamlit`
+
+## running in PyCharm
+
+```
+streamlit run template_page.py
+```
+
 ## use venv
 
 <!-- python3 -m venv streamlit-toy -->
