@@ -1,5 +1,11 @@
 # streamlit-toy
 
+## use venv
+
+<!-- python3 -m venv streamlit-toy -->
+
+I am using conda on Windows so `conda activate streamlit` would suffice. ofc create a venv called `streamlit` in anaconda navigator first
+
 ## core components
 
 - start.py
