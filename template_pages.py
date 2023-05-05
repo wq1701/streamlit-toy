@@ -1,31 +1,21 @@
-# streamlit run template_page.py
-
-import os
-from datetime import datetime
-import base64
-
-import pandas as pd
-import streamlit as st
-from PIL import Image
-import time
+# streamlit run template_pages.py
 
 import streamlit as st
+
+
 from header import show_header
 
 st.set_page_config(page_title="TEMPLATE_LAYOUT", page_icon="./icon/fish.ico", layout="wide",
                    initial_sidebar_state="auto", menu_items=None)
 
-
 # Show the header on the main page
 show_header()
+
+
 
 # Add content to the main page
 # st.write("Welcome to my app!")
 
-
-
-
-# col1, col2, col3, col4 = st.columns(4)
 
 # Create a sidebar with navigation links
 st.sidebar.title("Navigation")
@@ -52,7 +42,8 @@ if page == "About":
 
     st.markdown("## To-Do list")
     st.markdown("---")
-    st.markdown("- Add login credentials [ref](https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/)")
+    st.markdown(
+        "- Add login credentials [ref](https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/)")
     st.markdown("- Make sure the app is compatible with the new clusters")
     st.markdown("- Make sure there are showcases for users and well tested before publishing")
 
@@ -112,10 +103,6 @@ elif page == "Team Q&A":
 else:
     st.title("Contact Page")
     st.write("You can contact me at wq2151@caa.columbia.edu.")
-
-
-
-
 
 # with col3:
 #     st.header("Section 3")
