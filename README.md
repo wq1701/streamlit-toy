@@ -34,3 +34,8 @@ I am using conda on Windows so `conda activate streamlit` would suffice. ofc cre
 - function2.py
 - ...
 
+## requirements
+
+```
+streamlit ~= 1.21.0
+```
