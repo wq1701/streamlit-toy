@@ -1,10 +1,13 @@
 import streamlit as st
 
+
+# based on template_pages.py
+
 def after_login():
     from header import show_header
 
-    st.set_page_config(page_title="TEMPLATE_LAYOUT", page_icon="./icon/fish.ico", layout="wide",
-                       initial_sidebar_state="auto", menu_items=None)
+    # st.set_page_config(page_title="TEMPLATE_LAYOUT", page_icon="./icon/fish.ico", layout="wide",
+    #                    initial_sidebar_state="auto", menu_items=None)
 
     # Show the header on the main page
     show_header()
@@ -14,7 +17,7 @@ def after_login():
 
     # Create a sidebar with navigation links
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ("About", "Data Transfer", "Data Upload", "Team Q&A", "Contact"))
+    page = st.sidebar.radio("Go to", ("About", "Data Transfer", "Data Upload", "Automation", "Team Q&A", "Contact"))
 
     # Define the pages to display based on the selected link
     if page == "About":
@@ -91,10 +94,40 @@ def after_login():
             # print("transferring from ")
             st.write(f"Uploading {file_nm} to BDF table: {tgt_table_nm}")
 
+    elif page == "Automation":
+        col1, col2 = st.columns(2)
+
+        with col1:
+
+            st.subheader("A type of Automation: X")
+            st.write("This is for X")
+
+            study_x_name = st.text_input("Study X name", value="study_x_name")
+            x_param1 = st.text_input("Paramater 1", value="202201")
+            x_param2 = st.text_input("Paramater 2", value="202212")
+
+            if st.button("Start: X Automation"):
+                # print(f"transferring {src_hdfs} to {tgt_orac}") # not gonna work
+                st.write(f"Running {study_x_name} based on {x_param1} and {x_param2}")
+
+        with col2:
+
+            st.subheader("Another type of Automation: Y")
+            st.write("This is for Y")
+
+            study_y_name = st.text_input("Study Y name", value="study_y_name")
+            y_param1 = st.text_input("Paramater 1", value="Channel")
+            y_param2 = st.text_input("Paramater 2", value="Source")
+            y_param3 = st.text_input("Paramater 3", value="Date")
+
+            if st.button("Start: Y Automation"):
+                # print(f"transferring {src_hdfs} to {tgt_orac}") # not gonna work
+                st.write(f"Running {study_y_name} based on {y_param1}, {y_param2} and {y_param3}")
+
     elif page == "Team Q&A":
         st.title("Team knowledge index")
         st.write("Common Q&A of Team projects")
 
     else:
         st.title("Contact Page")
-        st.write("You can contact me at wq2151@caa.columbia.edu.")
+        st.write("You can contact me at weiwei.qi@iqvia.com")
