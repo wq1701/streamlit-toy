@@ -8,6 +8,8 @@ follow-up on checking conda env: `conda env list`
 
 `conda activate streamlit`
 
+try `pip install streamlit -i https://pypi.tuna.tsinghua.edu.cn/simple/` if the regular install won't work [reference](https://blog.csdn.net/SevenBerry/article/details/121088835)
+
 ## running in PyCharm
 
 ```
