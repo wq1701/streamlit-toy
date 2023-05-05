@@ -29,7 +29,7 @@ show_header()
 
 # Create a sidebar with navigation links
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ("About", "Data Transfer", "Data Upload", "CIME Q&A", "Contact"))
+page = st.sidebar.radio("Go to", ("About", "Data Transfer", "Data Upload", "Team Q&A", "Contact"))
 
 # Define the pages to display based on the selected link
 if page == "About":
@@ -47,8 +47,14 @@ if page == "About":
     st.markdown("## Features")
     st.markdown("- Data Transfer")
     st.markdown("- Data Upload")
-    st.markdown("- CIME knowledge / bugs / resources index")
+    st.markdown("- Team knowledge / bugs / resources index")
     st.markdown("- ...and?")
+
+    st.markdown("## To-Do list")
+    st.markdown("---")
+    st.markdown("- Add login credentials [ref](https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/)")
+    st.markdown("- Make sure the app is compatible with the new clusters")
+    st.markdown("- Make sure there are showcases for users and well tested before publishing")
 
 elif page == "Data Transfer":
     st.title("Data Transfer")
@@ -99,13 +105,13 @@ elif page == "Data Upload":
         # print("transferring from ")
         st.write(f"Uploading {file_nm} to BDF table: {tgt_table_nm}")
 
-elif page == "CIME Q&A":
-    st.title("CIME knowledge index")
-    st.write("Common Q&A of CIME projects")
+elif page == "Team Q&A":
+    st.title("Team knowledge index")
+    st.write("Common Q&A of Team projects")
 
 else:
     st.title("Contact Page")
-    st.write("You can contact us at contact@example.com.")
+    st.write("You can contact me at wq2151@caa.columbia.edu.")
 
 
 
