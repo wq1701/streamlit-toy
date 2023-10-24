@@ -13,7 +13,7 @@ try `pip install streamlit -i https://pypi.tuna.tsinghua.edu.cn/simple/` if the 
 ## running in PyCharm
 
 ```
-streamlit run template_page.py
+streamlit run template_pages.py
 ```
 
 ## use venv
